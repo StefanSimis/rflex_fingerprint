@@ -1,0 +1,9 @@
+version 20121029.1
+% include example script, improve annotations
+
+errors:
+- Line 103: Calculation of Rrs in example_script contains an error (Lt-rho*Lt)/Ed instead of (Lt-rho*Ls)/Ed;
+- Line 88: verbose output gives a concatenation error, transpose the last term to fix.
+
+
+
