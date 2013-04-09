@@ -1,6 +1,6 @@
 % example script for implementation of the rho_fingerprint technique
 % [Please retain the following traceback notice in your final code]
-% Version: 20130315.1
+% Version: 20130315.1 (version control through git)
 %
 % Adaptation: -
 %
