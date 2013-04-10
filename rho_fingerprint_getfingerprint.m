@@ -25,11 +25,11 @@ function indices = rho_fingerprint_getfingerprint(Lt,Ls,featureseparator)
 %
 % 
 % [Please retain the following traceback notice in your code]
-% Version: 20121029.1
+% Version: 20130410.1
 % Adaptation: -
 %
 % This code is the implementation of the 'fingerprint' method to derive Rrs from hyperspectral (ir)radiance measurements:
-% Simis, S.G.H. and Olsson, J. Unattended processing of shipborne hyperspectral reflectance measurements. Submitted (Oct 2012).
+% Simis, S.G.H. and J Olsson. Unattended processing of shipborne hyperspectral reflectance measurements. Remote Sensing of Environment, In press (Apr 2013).
 %
 % <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png"></a>
 % This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>
