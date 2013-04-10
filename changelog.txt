@@ -1,9 +1,9 @@
 
-version 20130410.1
-The paper on which the method is based is now in press. References updated:
+Version 20130410.1
+The journal article describing this method is now in press. References updated:
 Simis, S.G.H. and J. Olsson. Unattended processing of shipborne hyperspectral reflectance measurements. Remote Sensing of Environment, In press (Apr 2013).
 
-The fingerprint code is now available in a git repository: 
+The fingerprint code is now available from a public git repository: 
 To browse: http://sourceforge.net/p/rflex/fingerprint/ 
 To pull: git clone git://git.code.sf.net/p/rflex/fingerprint rflex-fingerprint
 
@@ -23,9 +23,9 @@ fixes:
 changes:
 - Raise new 'Empty' flag when fingerprint identification function returns no indices in the example script.
 
-- Better support sensors with narrow wavebands. Bandwidth and featureseparator are dynamically set and should be close to optimal for a wide range of hyperspectral sensors. The spectrum is automatically interpolated to a 2-nm grid so that slight differences in fingerprint band positions do not disqualify useful features. The optimization is then carried out on the original ('native') spectral resolution. The variable 'fingerprint_res' can be changed to the desired resolution for the fingerprint identification step. A value of 2 nm or wider is recommended. It is ignored if it is equal to the native resolution. Extensively tested with WISP-3 measurements. 
+- Better support for sensors with narrow (< 2nm) channel intervals. 'Bandwidth' and 'featureseparator' are dynamically set and should be close to optimal for a wider range of hyperspectral sensors. Each spectrum can be interpolated on the fly onto a 2-nm grid so that slight differences in fingerprint band positions do not disqualify useful features. The optimization is still carried out on the original ('native') spectral resolution. The variable 'fingerprint_res' can be changed to the desired resolution for the fingerprint identification step. A value of 2 nm or wider is recommended - experiment! The procedure is ignored if 'fingerprint_res' is set equal to the native resolution. Extensively tested with WISP-3 measurements. 
 
-- Exclusion of spectral regions (e.g. around the oxygen band, and edges of the spectrum where calibration might be poor) is now done After the identification of fingerprint bands. This is more robust when features are identified in the vicinity of these edges. 
+- Exclusion of spectral regions (e.g. around the oxygen band, and edges of the spectrum where calibration might be poor) is now done *after* the identification of fingerprint bands. This is more robust when features are identified in the vicinity of these edges. 
 
 - The exclusion of spectral regions is now based on a definition of the EXcluded rather than INcluded spectral regions.
 
