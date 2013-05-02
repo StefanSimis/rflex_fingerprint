@@ -22,11 +22,10 @@ function [remainder,fval_features,wlind_features] = rho_fingerprint_optimize(rho
 % Adaptation: -
 %
 % This code is the implementation of the 'fingerprint' method to derive Rrs from hyperspectral (ir)radiance measurements:
-% Simis, S.G.H. and J. Olsson. Unattended processing of shipborne hyperspectral reflectance measurements. Remote Sensing of Environment, in press. DOI: 10.1016/j.rse.2013.04.001
+% Simis, S.G.H. and J. Olsson. Unattended processing of shipborne hyperspectral reflectance measurements. Remote Sensing of Environment, In press (Apr 2013).
 %
 % <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png"></a>
 % This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>
-% This code is maintained in a git repository at http://sourceforge.net/p/rflex/fingerprint/
 %
 % Rflex hardware/software are described at http://sourceforge.net/p/rflex/wiki/Home/
 % 
@@ -42,12 +41,10 @@ bw = bandwidth;
 ind = indices;
 Lw = Lt - (rho*Ls);
 ratio = Lw./Ed;
-grid0 = [-bw:1:bw]';
-grid1 = grid0([1:bw,end-bw+1:end]);
 for j = 1:numel(ind);
     % fit polynome through this part of the spectrum (around the selected drop or rise)
-    Y = polyfit(grid1,ratio([ind(j)-bw:ind(j)-1,ind(j)+1:ind(j)+bw]),2);
-    Z = polyval(Y,grid0);
+    Y = polyfit([1:bw bw+2:1+2*bw]',ratio([ind(j)-bw:ind(j)-1,ind(j)+1:ind(j)+bw]),2);
+    Z = polyval(Y,[1:1+2*bw]');
     %then define the minimization parameter = distance from peak to polynomial fit
     remainder(j) = abs(ratio(ind(j))-Z(bw+1));
 end;
