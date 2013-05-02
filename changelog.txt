@@ -1,5 +1,22 @@
 
-Version 20130410.1
+
+*Version 20130501.1
+- The reference article got a DOI so citing is now possible:
+-- Simis, S.G.H. and J. Olsson. Unattended processing of shipborne hyperspectral reflectance measurements. Remote Sensing of Environment, in press. DOI: 10.1016/j.rse.2013.04.001
+
+- The fingerprint identification code (rho_fingerprint_getfingerprint.m) has been updated:
+-- more robust exclusion of edges of spectrum, including edges that have NaN values. 
+-- Stricter separation of multiple features in close proximity of each other. Only dominant features will be selected within each 'featureseparator' interval. 'featureseparator' is defined as a function argument as a number of spectral channels. A number equivalent to 10-15 nm bands is recommended. 
+-- It is expected that these changes will result in less variation in identified features between consecutive samples. It is also likely that the number of identified features will decrease slightly, but results should be more robust.
+
+- The example code was updated to reflect the above changes.
+- The code was tested on the example data set and other data sets. 
+
+- The code has been ported to Python and was verified against the Matlab code. 
+- The git respository was sorted into Matlab and Python sections (sorry for the mess)
+
+OLDER VERSIONS:
+*Version 20130410.1
 The journal article describing this method is now in press. References updated:
 Simis, S.G.H. and J. Olsson. Unattended processing of shipborne hyperspectral reflectance measurements. Remote Sensing of Environment, In press (Apr 2013).
 
@@ -29,9 +46,7 @@ changes:
 
 - The exclusion of spectral regions is now based on a definition of the EXcluded rather than INcluded spectral regions.
 
-
-OLDER VERSIONS:
-Version 20121029.1
+*Version 20121029.1
 - first release: include example script, improved annotations
 Bugs:
 - Line 103: Calculation of Rrs in example_script contains an error (Lt-rho*Lt)/Ed instead of (Lt-rho*Ls)/Ed; (Thanks Jenny)
