@@ -1,8 +1,8 @@
 
 
 *Version 20130501.1
-- The reference article got a DOI so citing is now possible:
--- Simis, S.G.H. and J. Olsson. Unattended processing of shipborne hyperspectral reflectance measurements. Remote Sensing of Environment, in press. DOI: 10.1016/j.rse.2013.04.001
+- The reference article can now be cited:
+-- Simis, S. G. H., and J. Olsson. 2013. Unattended processing of shipborne hyperspectral reflectance measurements. Remote Sens. Environ. 135: 202–212. [doi: 10.1016/j.rse.2013.04.001]
 
 - The fingerprint identification code (rho_fingerprint_getfingerprint.m) has been updated:
 -- more robust exclusion of edges of spectrum, including edges that have NaN values. 
