@@ -1,3 +1,6 @@
+*20130501.2
+- fix in Python example_script.py. getfingerprint call used native resolution Lt and Ls rather than (optionally) interpolated LtFpRes and LsFpRes.
+
 
 
 *Version 20130501.1

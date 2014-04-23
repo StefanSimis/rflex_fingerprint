@@ -69,7 +69,7 @@ for j in range(0,len(ID),1):
         EdFpRes = Ed
     
     #retrieve spectral indices of the Lt&Ls fingerprint
-    indices = rp.getfingerprint(Lt,Ls,featureseparator,edge_width)
+    indices = rp.getfingerprint(LtFpRes,LsFpRes,featureseparator,edge_width)
 
     #map the positions of the fingerprint bands onto the original wavelength grid
     indicesNativeRes =[]
