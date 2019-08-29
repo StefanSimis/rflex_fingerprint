@@ -15,7 +15,7 @@ Rflex Fingerprint algorithm (Python)
  This code is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>
 
 Rflex hardware/software are described at http://sourceforge.net/p/rflex/wiki/Home/
-This code is maintained in a git repository at http://sourceforge.net/p/rflex/fingerprint/
+This code is maintained in a git repository at https://github.com/StefanSimis/rflex_fingerprint/
 
 """
 import numpy as np
